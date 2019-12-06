@@ -8,6 +8,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * собираем со всех животных продукты и отправляем его в виде мапы
+ *
+ * @return Map<String   ,       Integer> -- тип продукта и его количество
+ */
+
+
 public class Farm {
     List<Animal> animalList = new ArrayList<Animal>();
 
