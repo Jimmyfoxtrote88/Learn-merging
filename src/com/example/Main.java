@@ -2,9 +2,8 @@ package com.example;
 
 import com.example.animal.Cow;
 import com.example.animal.Pig;
-import com.example.products.Product;
 
-import java.util.List;
+import java.util.Map;
 
 public class Main {
 
@@ -19,8 +18,8 @@ public class Main {
         farm.addAnimal(new Pig("Хавронья"));
         farm.addAnimal(new Pig());
 
-        List<Product> production = farm.getProduction();
-        System.out.println(production);
+        final Map<String, Integer> products = farm.getProduction();
+        System.out.println(products);
 
     }
 }

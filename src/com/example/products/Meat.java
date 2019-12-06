@@ -13,6 +13,11 @@ public class Meat implements Product {
         return String.format("Мясо %d кг", volume);
     }
 
+    @Override
+    public int getValue() {
+        return volume;
+    }
+
     public static class Milk implements Product {
         private final int volume;
 
@@ -23,6 +28,11 @@ public class Meat implements Product {
         @Override
         public String toString() {
             return String.format("Молоко %d литров", volume);
+        }
+
+        @Override
+        public int getValue() {
+            return volume;
         }
     }
 }
