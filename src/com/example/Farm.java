@@ -10,8 +10,7 @@ import java.util.Map;
 
 /**
  * собираем со всех животных продукты и отправляем его в виде мапы
- *
- * @return тип продукта и его количество
+ * @return  тип продукта и его количество
  */
 
 
@@ -29,9 +28,12 @@ public class Farm {
         for (Animal animal : animalList) {
             Product product = animal.getProduct();
             System.out.println(animal + " принесла нам " + product);
+            // если хранилище не содержит записи об этом продукте
             if (products.get(product.getClass().getSimpleName()) == null) {
+                //добавили его значение
                 products.put(product.getClass().getSimpleName(), product.getValue());
             } else {
+                // здесь добавляется значение продукта , если он уже есть в хранилище
                 final Integer value = products.get(product.getClass().getSimpleName());
                 products.put(product.getClass().getSimpleName(), value + product.getValue());
             }
